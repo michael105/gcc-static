@@ -1,11 +1,12 @@
 ## gcc-static
 
 When compiling statically linked binaries, quite often 
-the linked shared libraries do have dependencies, not linked in;
+you have to change the Makefile, or end up calling gcc yourself with the compiled object files.
+However, the linked shared libraries very often do have dependencies, not linked in;
 what results in unresolved symbols.
 
 
-Here is a quickly hacked script, which scans recursively for the dependencies,
+So here is a quickly hacked script, which scans recursively for the dependencies,
 and calls gcc with all the libraries to link.
 
 It's work in progress; but working now basically.
