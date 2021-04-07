@@ -2,7 +2,7 @@
 
 When compiling statically linked binaries, quite often 
 you have to change the Makefile, or end up calling gcc yourself with the compiled object files.
-However, the linked shared libraries very often do have dependencies, not linked in;
+However, the linked (originally shared) libraries very often do have dependencies, not linked in;
 what results in unresolved symbols.
 
 
