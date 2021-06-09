@@ -76,6 +76,8 @@ foreach my $lib ( @libs ){
 
 
 my $arg = join(" ",@NEWARGS);
+$arg =~ s/\"/\\\"/g;
+
 $arg.=" -Wl,-O1,--gc-sections,--start-group";
 
 foreach my $l ( @LIBS ){
